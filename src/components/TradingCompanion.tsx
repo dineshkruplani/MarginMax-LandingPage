@@ -4,33 +4,33 @@ const TradingCompanion = () => {
   const features = [
     {
       image: "/AI-Stock-Picker.png",
-      title: "AI Stock Picker",
-      description: "Advanced AI algorithms analyze market patterns and identify the most promising trading opportunities."
-    },
-    {
-      image: "/Copy-Top-Investor-Portfolios.png",
-      title: "Copy Top Investor Portfolios",
-      description: "Mirror the strategies of successful investors and automatically replicate their winning trades."
+      title: "AI Trade Picker",
+      description: "The core engine. Model keep a watch on live price action, checks indicators across timeframes, and fires clean calls with entry, stop, and targets."
     },
     {
       image: "/Crypto-Stock-Technical-Analysis.png",
-      title: "Crypto & Stock Technical Analysis",
-      description: "Comprehensive technical analysis across crypto and traditional markets with real-time insights."
-    },
-    {
-      image: "/Financial-AI-Agent.png",
-      title: "Financial AI Agent",
-      description: "Your personal AI assistant that provides instant market insights and trading recommendations."
+      title: "Strategy-Driven Logic",
+      description: "Calls aren't random. Model checks for various indicators, triggers, strategies, market movements, news, and more before calling in on a conviction."
     },
     {
       image: "/Stock-Monitor.png",
-      title: "Stock Monitor",
-      description: "Real-time monitoring and alerts for your watchlist with customizable notification preferences."
+      title: "Real-Time Adjustments",
+      description: "Model keep the signals updates with Take-Profit, Stop-Loss, and re-entry levels dynamically adjust based on how the signal and market evolves."
+    },
+    {
+      image: "/Financial-AI-Agent.png",
+      title: "Ask for a Read, Get a Response",
+      description: "Ask for analysis, signal explanation, market movements, or more - the agent gives a full breakdown and plan in seconds."
+    },
+    {
+      image: "/Copy-Top-Investor-Portfolios.png",
+      title: "Trade with Near-Zero Fees",
+      description: "Calls are built to run on Hyperliquid with Builders Code - fees is minimal as low as 0.015% to keep you in green always."
     },
     {
       image: "/Swing-Trading.png",
-      title: "Swing Trading",
-      description: "Automated swing trading strategies that capture medium-term price movements efficiently."
+      title: "Agent Swarm",
+      description: "Works as hedge fund desk - each agent runs a different strategy, reads a different part of the market, and competes to push the best calls. You get stacked signal quality, not just one model's opinion."
     }
   ];
 
@@ -45,9 +45,9 @@ const TradingCompanion = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-xl md:text-xl lg:text-xl font-light text-white mb-2">
-            Now just a dashboard.
-          </h2>
+                     <h2 className="text-xl md:text-xl lg:text-xl font-light text-white mb-2">
+             Now just a dashboard.
+           </h2>
           <h3 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white">
             Your Exclusive Trading Companion
           </h3>
