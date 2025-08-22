@@ -35,4 +35,4 @@ pids
 coverage/
 
 # Asset backup folder (since we've copied assets to public/)
-Assets/
+/Assets/
