@@ -45,9 +45,9 @@ const TradingCompanion = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-                     <h2 className="text-xl md:text-xl lg:text-xl font-light text-white mb-2">
-             Now just a dashboard.
-           </h2>
+          <h2 className="text-xl md:text-xl lg:text-xl font-light text-white mb-2">
+            Now just a dashboard.
+          </h2>
           <h3 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white">
             Your Exclusive Trading Companion
           </h3>
