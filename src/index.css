@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'MonaSansExpanded';
+  src: url('/Assets/MonaSansExpanded-Regular-DmFfBYTJ.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonaSansExpanded';
+  src: url('/Assets/MonaSansExpanded-Medium-B31LZiZE.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonaSansExpanded';
+  src: url('/Assets/MonaSansExpanded-SemiBold-BiNlvWqV.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MonaSansExpanded';
+  src: url('/Assets/MonaSansExpanded-Bold-BIURsO7K.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'MonaSansExpanded', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-500/30 transition-all duration-300 shadow-xl;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-green-500 via-emerald-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+}
