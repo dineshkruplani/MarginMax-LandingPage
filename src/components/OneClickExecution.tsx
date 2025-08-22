@@ -280,9 +280,9 @@ const OneClickExecution = () => {
               className="w-full h-full object-contain drop-shadow-2xl" 
               draggable={false}
               animate={{
-                filter: hovered === 'pol' 
+                filter: hovered === 'bera' 
                   ? 'brightness(1.15) blur(0px)' 
-                  : hovered && hovered !== 'pol' 
+                  : hovered && hovered !== 'bera' 
                     ? 'brightness(0.8) blur(3px)' 
                     : 'brightness(1) blur(0px)'
               }}

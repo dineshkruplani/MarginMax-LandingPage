@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
@@ -82,14 +82,15 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation Menu */}
-        {isMobileMenuOpen && (
-          <motion.div 
-            className="lg:hidden mt-4 pb-4 border-t border-gray-800"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-          >
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div 
+              className="lg:hidden mt-4 pb-4 border-t border-gray-800"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+            >
             <nav className="flex flex-col space-y-4 pt-4">
               <motion.a 
                 href="#trading" 
@@ -136,6 +137,7 @@ const Header = () => {
             </nav>
           </motion.div>
         )}
+        </AnimatePresence>
       </div>
     </motion.header>
   );
