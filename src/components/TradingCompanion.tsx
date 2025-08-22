@@ -35,26 +35,26 @@ const TradingCompanion = () => {
   ];
 
   return (
-    <section id="features" className="py-20 px-6 bg-black">
+    <section id="features" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-black">
       <div className="container mx-auto">
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 lg:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-                     <h2 className="text-xl md:text-xl lg:text-xl font-light text-white mb-2">
-             Now just a dashboard.
-           </h2>
-          <h3 className="text-3xl md:text-4xl lg:text-4xl font-bold text-white">
+          <h2 className="text-lg sm:text-xl lg:text-xl font-light text-white mb-2">
+            Now just a dashboard.
+          </h2>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white">
             Your Exclusive Trading Companion
           </h3>
         </motion.div>
 
-        {/* Feature Cards Grid - Using Actual Feature Images with Overlaid Text */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {/* Feature Cards Grid - Mobile Responsive */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -84,12 +84,12 @@ const TradingCompanion = () => {
                   draggable={false}
                 />
                 
-                {/* Overlaid Text Content */}
-                <div className="absolute bottom-6 left-6 right-6 text-left">
-                  <h4 className="text-xl font-semibold text-white mb-2">
+                {/* Overlaid Text Content - Mobile Optimized */}
+                <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 right-3 sm:right-6 text-left">
+                  <h4 className="text-lg sm:text-xl font-semibold text-white mb-1 sm:mb-2">
                     {feature.title}
                   </h4>
-                  <p className="text-sm text-gray-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

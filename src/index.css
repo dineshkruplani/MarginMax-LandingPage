@@ -33,6 +33,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
   }
   
   body {
@@ -40,6 +42,28 @@
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
     color: #FFFFFF;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    body {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    /* Ensure minimum touch target size */
+    button, a, [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -54,5 +78,20 @@
   
   .glass-effect {
     @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  /* Mobile-optimized button styles */
+  .btn-mobile {
+    @apply w-full sm:w-auto px-4 py-3 sm:px-5 sm:py-2.5 text-center;
+  }
+
+  /* Mobile-optimized text sizing */
+  .text-mobile-responsive {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl;
+  }
+
+  /* Mobile-optimized spacing */
+  .section-mobile {
+    @apply py-8 sm:py-12 lg:py-16 px-4 sm:px-6;
   }
 }
